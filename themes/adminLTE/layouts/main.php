@@ -25,11 +25,11 @@ AppAsset::register($this);
     <div class="wrapper">
         <header class="main-header">
             <!-- Logo -->
-            <a href="<?= Yii::$app->request->baseUrl; ?>" class="logo">
+            <a href="/" class="logo">
               <!-- mini logo for sidebar mini 50x50 pixels -->
               <span class="logo-mini"><b>A</b>LT</span>
               <!-- logo for regular state and mobile devices -->
-              <span class="logo-lg"><b>Admin</b>LTE</span>
+              <span class="logo-lg"><b>Концерты</b></span>
             </a>
 
             <!-- Header Navbar: style can be found in header.less -->
@@ -42,18 +42,32 @@ AppAsset::register($this);
                 <span class="icon-bar"></span>
               </a>
               <div class="navbar-custom-menu">
-                  <?php
-                      echo Nav::widget([
-                          'options' => ['class' => 'nav navbar-nav'],
-                          'items' => [
-                              Yii::$app->user->isGuest ?
-                                  ['label' => 'Login', 'url' => ['/site/login']] :
-                                  ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                                      'url' => ['/site/logout'],
-                                      'linkOptions' => ['data-method' => 'post']],
-                          ],
-                      ]);
-                  ?>
+                 
+            <ul class="nav navbar-nav">
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="hidden-xs"><?=Yii::$app->user->identity->name ?></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="user-header">
+                            <img src="<?= 'http://' . $_SERVER['SERVER_NAME'] ?>/images/nouser.png" class="img-circle" alt="User Image"/>
+                            <p> <?=Yii::$app->user->identity->name ?> </p>
+                        </li>
+                        <li class="user-footer">
+                            
+                            <div class="pull-right">
+                                <?= Html::a(
+                                    'Выход',
+                                    ['/site/logout'],
+                                    ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
+                                ) ?>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                
+            </ul>
+                  
               </div>
             </nav>
 

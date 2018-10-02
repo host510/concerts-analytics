@@ -11,10 +11,10 @@ $this->title = 'Login';
 
 <div class="login-box">
     <div class="login-logo">
-        <a href="../../index2.html"><b>Admin</b>LTE</a>
+        <a href="../../index2.html"><b>КОНЦЕРТЫ</b></a>
     </div><!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <p class="login-box-msg">Введите данные авторизации</p>
 
          <?php $form = ActiveForm::begin([
              'id' => 'login-form',
@@ -36,10 +36,10 @@ $this->title = 'Login';
 
          <div class="row">
              <div class="col-xs-8">
-                <a href="#"><?php echo Yii::t('app', 'I forgot my password'); ?></a>
+                <a href="#"><?php echo Yii::t('app', 'Забыли пароль'); ?></a>
             </div><!-- /.col -->
              <div class="col-xs-4">
-                 <?= Html::submitButton('Login', ['class' => 'btn btn-primary btn-block btn-flat', 'name' => 'login-button']) ?>
+                 <?= Html::submitButton('Войти', ['class' => 'btn btn-primary btn-block btn-flat', 'name' => 'login-button']) ?>
              </div>
          </div>
 
