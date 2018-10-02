@@ -41,14 +41,14 @@ use app\themes\adminLTE\components\ThemeNav;
                   'items' => [
                       ['label'=>Yii::t('app','МЕНЮ'), 'options'=>['class'=>'header']],
                       ['label' => 'Главная', 'icon' => 'home','url' => ['/']],
-                      ['label' => 'Аналитика', 'icon' => 'area-chart','url' => ['site/analytics']],
+                      ['label' => 'Аналитика', 'icon' => 'area-chart','url' => ['/analytics']],
                       ['label' => 'Концерты',
                         'icon' => 'cube',
                         'url' => '#',
                         'items' => [
-                          ['label' => 'Добавить', 'icon' => 'book', 'url' => ['site/addconcert'],],
-                          ['label' => 'Наши концерты', 'icon' => 'filter', 'url' => ['site/ours'],],
-                          ['label' => 'Концерты конкурентов', 'icon' => 'filter', 'url' => ['site/competitors'],],
+                          ['label' => 'Добавить', 'icon' => 'book', 'url' => ['/addconcert'],],
+                          ['label' => 'Наши концерты', 'icon' => 'filter', 'url' => ['/ours'],],
+                          ['label' => 'Концерты конкурентов', 'icon' => 'filter', 'url' => ['/competitors'],],
                         ],
                       ]
                   ]

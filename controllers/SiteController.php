@@ -69,56 +69,7 @@ class SiteController extends Controller
         }
         return $this->render('concerts');
     }
-
-    /**
-     * Displays competitors page.
-     *
-     * @return string
-     */
-    public function actionCompetitors()
-    {
-        return $this->render('competitors');
-    }
-
-    /**
-     * Displays ours page.
-     *
-     * @return string
-     */
-    public function actionOurs()
-    {
-        return $this->render('ours');
-    }
-
-    /**
-     * Displays addconcert page.
-     *
-     * @return string
-     */
-    public function actionAddconcert()
-    {
-        $model = new Addconcert();
-        if($model->load(Yii::$app->request->post()) && $model->validate()){
-           if($model->save()) {
-            Yii::$app->session->setFlash('success', "Концерт добавлен");
-           } else {
-            Yii::$app->session->setFlash('error', "Концерт не добавлен. Что-то пошло не так.");
-           }
-        }
-        return $this->render('addconcert', compact('model'));
-    }
-
-    /**
-     * Displays analytics page.
-     *
-     * @return string
-     */
-    public function actionAnalytics()
-    {
-        
-        return $this->render('analytics');
-    }
-
+    
     /**
      * Login action.
      *

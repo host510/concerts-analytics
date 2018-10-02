@@ -66,7 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			</div>&nbsp;&nbsp;
 			<button type="button" class="btn btn-primary minus20" data-toggle="modal" data-target="#add-category">Добавить жанр</button>
 			<br><br>
-			<?php if(Yii::$app->session->hasFlash('success') ): ?>
+			<?php if(Yii::$app->session->hasFlash('success')): ?>
 			<div class="col-md-6 col-md-offset-3">
 				<div class="alert alert-success alert-dismissible" role="alert">
 					 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">Закрыть&times;</span></button>
