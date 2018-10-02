@@ -26,6 +26,10 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
+                        'actions' => ['login', 'error'],
+                        'allow' => true,
+                    ],
+                    [
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -65,11 +69,11 @@ class SiteController extends Controller
     public function actionIndex()
     {
         if (Yii::$app->user->isGuest) {
-           return $this->redirect('login');
+           return $this->redirect('site/login');
         }
-        return $this->render('concerts');
+        return $this->render('/concerts/index');
     }
-    
+
     /**
      * Login action.
      *
