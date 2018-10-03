@@ -5,9 +5,9 @@ use yii\db\Migration;
 /**
  * Handles the creation of table `users`.
  */
-class m180928_055224_create_users_table extends Migration
+class m181002_135322_create_users_table extends Migration
 {
-   /**
+    /**
      * {@inheritdoc}
      */
     public function up()
@@ -34,14 +34,6 @@ class m180928_055224_create_users_table extends Migration
             'role_id' => 2 // Работник
         ]);
 
-        $this->addForeignKey(
-            'fk-users-role_id',
-            'users',
-            'role_id',
-            'roles',
-            'id',
-            'CASCADE'
-        );
     }
 
     /**

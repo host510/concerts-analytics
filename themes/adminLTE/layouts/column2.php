@@ -60,7 +60,7 @@ use app\themes\adminLTE\components\ThemeNav;
                         'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                         'items' => [
                             ['label' => 'Menu', 'options' => ['class' => 'header']],
-                            ['label' => 'Signup', 'icon' => 'sign-in', 'url' => ['site/signup']],                            
+                            ['label' => 'Signup', 'icon' => 'sign-in', 'url' => ['/signup']],                            
                         ],
                     ]
                 );

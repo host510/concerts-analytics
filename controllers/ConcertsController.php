@@ -54,7 +54,7 @@ class ConcertsController extends Controller
     /**
      * Displays homepage.
      *
-     * @return string
+     * @return array
      */
     public function actionIndex()
     {

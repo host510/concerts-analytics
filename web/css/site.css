@@ -9,6 +9,56 @@ body {
     color: #3C8DBC;
     font-size: 1.3rem;
 }
+.concerts-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.single-concert {
+    position: relative;
+    padding-bottom: 5px;
+    width: 18%;
+    height: 150px;
+    background-color: #3C8DBC;
+    color: #fff;
+}
+.new {
+    display: inline-block;
+    height: 20%;
+    color: #fff;
+    background-color: #BF252F;
+    padding: 5px;
+    font-style: italic;
+}
+@media(max-width: 760px) {
+
+.concerts-container {
+   display: block;
+}
+.single-concert {
+   display: inline-block;
+   width: 200px;
+   height: 150px;
+   margin: 2vw 5vw;
+}
+
+}
+
+.oh {
+    overflow: hidden;
+}
+.padding5 {
+    padding: 5px;
+}
+.forname {
+    height: 50%;
+}
+.fordate {
+    position: absolute;
+    bottom: 0;
+    height: 30%;
+    font-weight: bold;
+}
 .wrap {
     min-height: 1000%;
     height: auto;

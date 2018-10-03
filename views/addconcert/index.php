@@ -64,8 +64,22 @@ $this->params['breadcrumbs'][] = $this->title;
                     ],
                 ]); ?>
 			</div>&nbsp;&nbsp;
-			<button type="button" class="btn btn-primary minus20" data-toggle="modal" data-target="#add-category">Добавить жанр</button>
-			<br><br>
+			<?php
+			 Modal::begin([
+			 'header' => '<h2>Добавление жанра</h2>',
+			 'toggleButton' => [
+			 'label' => 'Добавить жанр',
+			 'tag' => 'button',
+			 'class' => 'btn btn-primary minus20',
+			 ]
+			 ]);
+			?>
+			 <?php $form = ActiveForm::begin(['id' => 'add-category']); ?>
+				 <?= $form->field($cat_model, 'name')->textInput(['autofocus' => true]) ?>
+				 <?= Html::submitButton('Добавить', ['class' => 'btn btn-success', 'name' => 'add-category']) ?>
+			 <?php ActiveForm::end(); ?>
+			<?php Modal::end(); ?>
+
 			<?php if(Yii::$app->session->hasFlash('success')): ?>
 			<div class="col-md-6 col-md-offset-3">
 				<div class="alert alert-success alert-dismissible" role="alert">

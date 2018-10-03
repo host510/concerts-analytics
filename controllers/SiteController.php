@@ -5,14 +5,8 @@ namespace app\controllers;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
-// use yii\web\Request;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
-use app\models\Ours;
-use app\models\Competitors;
-use app\models\Addconcert;
-use app\models\Concerts;
-use app\models\Analytics;
 
 class SiteController extends Controller
 {
